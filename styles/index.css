@@ -1,0 +1,23 @@
+/* fonts */
+
+/* css variables */
+
+:root {
+	/* color palette */
+	--color-black: #282828;
+	--color-white: #fafafa;
+	--color-nude-100: #fff5e1;
+	--color-nude-200: #ffd39a;
+	--color-teal-100: #39e5e5;
+	--color-teal-200: #319da0;
+	--color-purple-100: #f06cf4;
+	--color-purple-200: #781c68;
+}
+
+/* css reset */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
