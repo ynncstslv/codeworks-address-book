@@ -15,5 +15,50 @@
 		<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
 		<title>Codeworks | Address Book</title>
 	</head>
-	<body></body>
+	<body>
+		<main>
+			<div class="container main-container">
+				<section class="title">
+					<h1>&lt; Address Book /&gt;</h1>
+
+					<button class="btn add-btn">
+						<i class="fa-solid fa-user-plus"></i>
+					</button>
+				</section>
+				<section class="contacts">
+					<div class="search">
+						<input type="text" placeholder="Search for a contact..." />
+						<button class="btn search-btn">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+						<button class="btn filter-btn">
+							<i class="fa-solid fa-filter"></i>
+						</button>
+					</div>
+					<div class="no-contacts">
+						<h2>
+							Add a new contact on the
+							<i class="fa-solid fa-user-plus"></i> button...
+						</h2>
+					</div>
+					<div class="saved-contacts"></div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<div class="footer-container">
+				<p>
+					Coding Challenge | Codeworks &copy; May, 2023 |
+					<a href="https://github.com/ynncstslv/">Yann Costa e Silva</a>
+				</p>
+			</div>
+		</footer>
+		<!-- ===== JS / JQUERY ===== -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.min.js"
+			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			crossorigin="anonymous"
+		></script>
+		<script src="./scripts/script.js"></script>
+	</body>
 </html>

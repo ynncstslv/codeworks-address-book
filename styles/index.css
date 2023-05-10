@@ -1,18 +1,6 @@
 /* fonts */
 
-/* css variables */
-
-:root {
-	/* color palette */
-	--color-black: #282828;
-	--color-white: #fafafa;
-	--color-nude-100: #fff5e1;
-	--color-nude-200: #ffd39a;
-	--color-teal-100: #39e5e5;
-	--color-teal-200: #319da0;
-	--color-purple-100: #f06cf4;
-	--color-purple-200: #781c68;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@500&display=swap');
 
 /* css reset */
 
@@ -21,3 +9,186 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+/* css variables */
+
+:root {
+	/* main color palette */
+	--color-light: #f5f5f5;
+	--color-dark: #0a0a0a;
+	--color-primary: #2dd4bf;
+	--color-secondary: #a855f7;
+	/* label color palette */
+	--color-family: #f9a8d4;
+	--color-friends: #7dd3fc;
+	--color-work: #fde047;
+	/* typography */
+	--font-family: 'Poppins', sans-serif;
+	/* shadow */
+	--shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+	/* transition */
+	--transition: all 400ms ease;
+}
+
+/* general tags */
+
+body {
+	font-family: var(--font-family);
+	color: var(--color-light);
+	background: linear-gradient(180deg, #0c0a09 0%, #171717 100%);
+	overflow: hidden;
+}
+
+main {
+	width: 50%;
+	height: 93vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+input {
+	font-family: var(--font-family);
+	border: 0;
+	border-radius: 5px;
+}
+
+footer {
+	height: 7vh;
+	border-top: 1px solid var(--color-dark);
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-light);
+}
+
+/* reusable classes */
+
+.container {
+	margin: 0 auto;
+}
+
+.btn {
+	width: 40px;
+	height: 40px;
+	font-family: var(--font-family);
+	font-size: 1rem;
+	border: 0;
+	border-radius: 5px;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+/* main content */
+
+.main-container {
+	width: 100%;
+	text-align: center;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.title h1 {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+}
+
+.add-btn {
+	color: var(--color-light);
+	border: 2px solid var(--color-light);
+	background-color: transparent;
+}
+
+/* contacts card */
+
+.contacts {
+	padding: 1.5rem;
+	margin-top: 1.5rem;
+	border-radius: 10px;
+	background-color: #1c1917;
+	box-shadow: var(--shadow);
+}
+
+/* search bar */
+
+.search {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+}
+
+.search input {
+	width: 90%;
+	height: 40px;
+	padding: 0 0.8rem;
+	color: #1c1917;
+}
+
+.search input:focus {
+	outline-color: #1c1917;
+}
+
+.search-btn {
+	color: var(--color-light);
+	border: 2px solid var(--color-light);
+	background-color: transparent;
+}
+
+.filter-btn {
+	color: var(--color-light);
+	border: 2px solid var(--color-light);
+	background-color: transparent;
+}
+
+/* no contacts state */
+
+.no-contacts {
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1.5rem;
+	color: #57534e;
+}
+
+.no-contacts h2 {
+	font-weight: 300;
+	font-size: 1.1rem;
+}
+
+.no-contacts i {
+	margin: 0 0.3rem;
+	font-size: 1rem;
+}
+
+/* add contact modal form */
+
+/* saved contacts */
+
+/* delete contact modal */
+
+/* footer */
+
+.footer-container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-container p {
+	font-weight: 200;
+	font-size: 0.8rem;
+	letter-spacing: 1px;
+}
+
+/* --------------------------------------------- tests ------------------------- */
