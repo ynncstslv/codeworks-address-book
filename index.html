@@ -20,36 +20,127 @@
 			<div class="container main-container">
 				<section class="title">
 					<h1>&lt; Address Book /&gt;</h1>
-
-					<button class="btn add-btn">
+					<button class="btn add-btn" id="addBtn">
 						<i class="fa-solid fa-user-plus"></i>
 					</button>
 				</section>
-				<section class="contacts">
-					<div class="search">
-						<input type="text" placeholder="Search for a contact..." />
-						<button class="btn search-btn">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</button>
-						<button class="btn filter-btn">
-							<i class="fa-solid fa-filter"></i>
-						</button>
-					</div>
+				<section class="container contacts-container">
 					<div class="no-contacts">
 						<h2>
-							Add a new contact on the
+							Add a new contact by clicking the
 							<i class="fa-solid fa-user-plus"></i> button...
 						</h2>
 					</div>
-					<div class="saved-contacts"></div>
+					<!-- <div class="saved-contacts">
+						<div class="search">
+							<input type="text" placeholder="Search for a contact..." />
+							<button class="btn search-btn">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+							<button class="btn filter-btn">
+								<i class="fa-solid fa-filter"></i>
+							</button>
+						</div>
+						<div class="contact-card"></div>
+					</div> -->
 				</section>
 			</div>
 		</main>
+		<aside class="add-modal-container">
+			<div class="overlay"></div>
+			<form class="add-modal-form" id="addModal">
+				<div class="add-modal-content">
+					<div class="add-modal-header">
+						<h2>&lt; Add Contacts /&gt;</h2>
+						<button class="btn close-btn">
+							<i class="fa-solid fa-xmark"></i>
+						</button>
+					</div>
+					<div class="add-modal-main">
+						<div class="add-modal-form-row grid">
+							<div class="add-modal-form-col">
+								<label for="add-name">First Name</label>
+								<input
+									name="add-name"
+									type="text"
+									placeholder="John"
+									class="add-modal-input"
+									required
+								/>
+							</div>
+							<div class="add-modal-form-col">
+								<label for="add-surname">Last Name</label>
+								<input
+									name="add-surname"
+									type="text"
+									placeholder="Doe"
+									class="add-modal-input"
+									required
+								/>
+							</div>
+						</div>
+						<div class="add-modal-form-row grid">
+							<div class="add-modal-form-col">
+								<label for="add-phone">Phone</label>
+								<input
+									name="add-phone"
+									type="text"
+									placeholder="+55 (11) 91234-5678"
+									class="add-modal-input"
+									required
+								/>
+							</div>
+							<div class="add-modal-form-col">
+								<label for="add-email">Email</label>
+								<input
+									name="add-email"
+									type="email"
+									placeholder="johndoe@email.com"
+									class="add-modal-input"
+								/>
+							</div>
+						</div>
+						<div class="add-modal-form-row">
+							<div class="add-modal-form-col">
+								<label for="add-address">Address</label>
+								<input
+									name="add-address"
+									type="text"
+									placeholder="Dean Bradley House, 52 Horseferry Rd, London, UK"
+									class="add-modal-input"
+									required
+								/>
+							</div>
+						</div>
+						<div class="add-modal-form-row">
+							<div class="add-modal-form-col-radio">
+								<div class="family">
+									<input name="add-label" type="radio" value="Family" />
+									<label for="add-label">Family</label>
+								</div>
+								<div class="friends">
+									<input name="add-label" type="radio" value="Friends" />
+									<label for="add-label">Friends</label>
+								</div>
+								<div class="work">
+									<input name="add-label" type="radio" value="Work" />
+									<label for="add-label">Work</label>
+								</div>
+							</div>
+						</div>
+						<div class="add-modal-form-row btn-row" id="addModalBtn">
+							<button type="submit" id="saveBtn" class="btn save-btn">
+								Save
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</aside>
 		<footer>
 			<div class="footer-container">
 				<p>
-					Coding Challenge | Codeworks &copy; May, 2023 |
-					<a href="https://github.com/ynncstslv/">Yann Costa e Silva</a>
+					Coding Challenge | Codeworks &copy; May, 2023 | Yann Costa e Silva
 				</p>
 			</div>
 		</footer>
