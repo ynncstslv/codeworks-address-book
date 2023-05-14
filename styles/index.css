@@ -22,6 +22,7 @@
 	--color-primary-200: #134e4a;
 	--color-secondary-100: #a855f7;
 	--color-secondary-200: #3b0764;
+	--color-danger: #dc2626;
 	/* label color palette */
 	--color-family: #f9a8d4;
 	--color-friends: #7dd3fc;
@@ -250,7 +251,7 @@ footer {
 }
 
 .add-modal-form-col input:invalid {
-	outline-color: #dc2626;
+	outline-color: var(--color-secondary-100);
 }
 
 .btn-row {
@@ -268,6 +269,11 @@ footer {
 
 /* saved contacts state */
 
+.saved-contacts {
+	max-height: 400px;
+	overflow-y: auto;
+}
+
 /* search bar */
 
 .search {
@@ -275,6 +281,7 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	gap: 0.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .search input {
@@ -289,20 +296,72 @@ footer {
 }
 
 .search-btn {
-	color: var(--color-light);
-	border: 2px solid var(--color-light);
+	width: 80px;
+	color: var(--color-secondary-100);
+	border: 2px solid var(--color-secondary-100);
 	background-color: transparent;
 }
 
+.search-btn:hover {
+	color: var(--color-light-dark-100);
+	background-color: var(--color-secondary-100);
+}
+
 .filter-btn {
-	color: var(--color-light);
-	border: 2px solid var(--color-light);
+	color: var(--color-secondary-100);
+	border: 2px solid var(--color-secondary-100);
 	background-color: transparent;
+}
+
+.filter-btn:hover {
+	color: var(--color-light-dark-100);
+	background-color: var(--color-secondary-100);
 }
 
 /* contacts saved */
 
-/* delete contact modal */
+.contact-card {
+	border-radius: 5px;
+}
+
+.contact-saved {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.8rem 1.5rem;
+	margin-top: 0.5rem;
+	color: var(--color-light-dark-100);
+}
+
+.contact-saved .contact-name {
+	font-size: 0.9rem;
+}
+
+.contact-saved .label {
+	font-size: 0.7rem;
+	padding: 0.2rem 0.4rem;
+	border-radius: 3px;
+	background-color: var(--color-light);
+}
+
+.contact-saved .phone,
+.contact-saved .email,
+.contact-saved .address {
+	font-size: 0.7rem;
+}
+
+.delete-btn {
+	color: var(--color-light-dark-200);
+	border: 2px solid var(--color-light-dark-200);
+	background-color: transparent;
+}
+
+.delete-btn:hover {
+	color: var(--color-danger);
+	background-color: var(--color-light-dark-200);
+}
 
 /* footer */
 

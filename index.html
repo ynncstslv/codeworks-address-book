@@ -16,6 +16,7 @@
 		<title>Codeworks | Address Book</title>
 	</head>
 	<body>
+		<!-- main section | start -->
 		<main>
 			<div class="container main-container">
 				<section class="title">
@@ -25,34 +26,40 @@
 					</button>
 				</section>
 				<section class="container contacts-container">
-					<div class="no-contacts">
+					<!-- the no-contacts div will be displayed by default and hidden once the user adds a contact -->
+					<div class="no-contacts" id="noContacts">
 						<h2>
 							Add a new contact by clicking the
 							<i class="fa-solid fa-user-plus"></i> button...
 						</h2>
 					</div>
-					<!-- <div class="saved-contacts">
+					<!-- the saved-contacts div will be hidden by default and displayed once the user adds a contact -->
+					<div class="saved-contacts" id="savedContacts">
+						<!-- search bar -->
 						<div class="search">
-							<input type="text" placeholder="Search for a contact..." />
-							<button class="btn search-btn">
+							<input
+								type="text"
+								id="searchInput"
+								placeholder="Search for a contact..."
+							/>
+							<button class="btn search-btn" id="searchBtn">
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</button>
-							<button class="btn filter-btn">
-								<i class="fa-solid fa-filter"></i>
-							</button>
 						</div>
-						<div class="contact-card"></div>
-					</div> -->
+						<!-- when the user saves a contact, it will be displayed in cards and this one is just to show where they'll be added using jquery -->
+					</div>
 				</section>
 			</div>
 		</main>
-		<aside class="add-modal-container">
+		<!-- main section | end -->
+		<!-- aside | modal | add contact form | start -->
+		<aside class="add-modal-container" id="addModal">
 			<div class="overlay"></div>
-			<form class="add-modal-form" id="addModal">
+			<form action="" class="add-modal-form">
 				<div class="add-modal-content">
 					<div class="add-modal-header">
 						<h2>&lt; Add Contacts /&gt;</h2>
-						<button class="btn close-btn">
+						<button class="btn close-btn" id="closeBtn">
 							<i class="fa-solid fa-xmark"></i>
 						</button>
 					</div>
@@ -115,21 +122,36 @@
 						<div class="add-modal-form-row">
 							<div class="add-modal-form-col-radio">
 								<div class="family">
-									<input name="add-label" type="radio" value="Family" />
-									<label for="add-label">Family</label>
+									<input
+										name="add-label"
+										type="radio"
+										value="Family"
+										id="add-label-family"
+									/>
+									<label for="add-label-family">Family</label>
 								</div>
 								<div class="friends">
-									<input name="add-label" type="radio" value="Friends" />
-									<label for="add-label">Friends</label>
+									<input
+										name="add-label"
+										type="radio"
+										value="Friends"
+										id="add-label-friends"
+									/>
+									<label for="add-label-friends">Friends</label>
 								</div>
 								<div class="work">
-									<input name="add-label" type="radio" value="Work" />
-									<label for="add-label">Work</label>
+									<input
+										name="add-label"
+										type="radio"
+										value="Work"
+										id="add-label-work"
+									/>
+									<label for="add-label-work">Work</label>
 								</div>
 							</div>
 						</div>
 						<div class="add-modal-form-row btn-row" id="addModalBtn">
-							<button type="submit" id="saveBtn" class="btn save-btn">
+							<button type="submit" class="btn save-btn" id="saveBtn">
 								Save
 							</button>
 						</div>
@@ -137,6 +159,8 @@
 				</div>
 			</form>
 		</aside>
+		<!-- aside | modal | add contact form | end -->
+		<!-- footer section | start -->
 		<footer>
 			<div class="footer-container">
 				<p>
@@ -144,7 +168,8 @@
 				</p>
 			</div>
 		</footer>
-		<!-- ===== JS / JQUERY ===== -->
+		<!-- footer section | end -->
+		<!-- ===== jquery  / js ===== -->
 		<script
 			src="https://code.jquery.com/jquery-3.6.4.min.js"
 			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
